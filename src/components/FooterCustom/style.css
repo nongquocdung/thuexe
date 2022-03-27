@@ -1,0 +1,29 @@
+.footer-custom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px 60px;
+    padding-bottom: 50px;
+    align-items: center;
+    background-color: #eee;
+}
+
+.footer-custom .contact .title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.footer-custom .contact span {
+    font-style: italic;
+    color: #333;
+}
+
+.footer-custom .support {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.footer-custom .support p{
+    font-size: 20px;
+    font-weight: 500;
+}
