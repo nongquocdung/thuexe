@@ -25,7 +25,7 @@ const items = [
     }
 ];
 
-export const DashboardSidebar = (props) => {
+export const SideBar = (props) => {
 
     return (
         <>
@@ -38,7 +38,10 @@ export const DashboardSidebar = (props) => {
             >
                 <div>
                     <Box sx={{ p: 3 }}>
-                        <img src="https://cdn-media-2.freecodecamp.org/w1280/5f9c9c8c740569d1a4ca32d2.jpg"/>
+                        <img 
+                        src="https://cdn-media-2.freecodecamp.org/w1280/5f9c9c8c740569d1a4ca32d2.jpg"
+                        width="55" 
+                        height="55"/>
                     </Box>
                     <Box sx={{ px: 2 }}>
                         <Box
@@ -101,22 +104,6 @@ export const DashboardSidebar = (props) => {
                     >
                         version 1.0.v
                     </Typography>
-                    <Box
-                        sx={{
-                            display: 'flex',
-                            mt: 2,
-                            mx: 'auto',
-                            width: '160px',
-                            '& img': {
-                                width: '100%'
-                            }
-                        }}
-                    >
-                        <img
-                            alt="Go to pro"
-                            src="/static/images/sidebar_pro.png"
-                        />
-                    </Box>
                 </Box>
             </Box>
         </>
