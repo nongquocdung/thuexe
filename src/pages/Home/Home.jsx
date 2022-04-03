@@ -1,5 +1,5 @@
 import React from 'react';
-import ResponsiveAppBar from '../components/AppBar/Bar';
+import ResponsiveAppBar from '../../components/AppBar/Bar';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -8,7 +8,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import HorizontalLinearStepper from '../components/Step/StepCar';
+import HorizontalLinearStepper from '../../components/Step/StepCar';
 
 const responsive = {
   superLargeDesktop: {
@@ -91,7 +91,7 @@ const Home = () => {
     <div style={{padding: '10px 50px'}}>
       <br/>
       <div className={'carousel-car-populate'}>
-        <h4>Các xe phổ biến</h4>
+        <h2>Các xe phổ biến</h2>
         <Carousel responsive={responsive}>
             {data.map(item => {
                 return <CardMUI key={item.id} data={item}/>
@@ -100,7 +100,7 @@ const Home = () => {
       </div>
       <br/>
       <div className="stepper-car">
-        <h4>Quy trình đặt xe</h4>
+        <h2>Quy trình đặt xe</h2>
           <HorizontalLinearStepper/>
       </div>
     </div>
