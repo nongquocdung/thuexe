@@ -6,7 +6,8 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ListCar from "./pages/ListCar";
 import "./App.css";
-import { SideBar } from "./components/sideBar/SideBar";
+import { Support } from "./pages/Support";
+// import { SideBar } from "./components/sideBar/SideBar";
 const App = () => {
   return (
     <BrowserRouter>
@@ -16,9 +17,9 @@ const App = () => {
         <Route path="/" element={<MainPage />}>
           <Route path="home" element={<Home />} />
           <Route path="listcar" element={<ListCar />} />
-          <Route path="support" element={<>Support</>} />
+          <Route path="support" element={<Support />} />
         </Route>
-        <Route path="/test" element={<SideBar />} />
+        {/* <Route path="/test" element={<SideBar />} /> */}
       </Routes>
     </BrowserRouter>
   );
