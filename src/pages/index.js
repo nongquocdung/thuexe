@@ -4,11 +4,12 @@ import ResponsiveAppBar from '../components/AppBar/Bar'
 import FooterCustom from '../components/FooterCustom/FooterCustom'
 
 const MainPage = () => {
+
   return (
     <div className='main-page'>
         <ResponsiveAppBar/>
         <div className='page'>
-            <Outlet/>
+            <Outlet/> 
         </div>
         <FooterCustom/>
     </div>
