@@ -12,23 +12,23 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { NavItem } from "./nav-item";
 const items = [
   {
-    href: "/",
+    href: "/user/rent",
     title: "Thuê xe",
   },
   {
-    href: "/customers",
+    href: "/user/information",
     title: "Thông tin cá nhân",
   },
   {
-    href: "/products",
+    href: "/user/support",
     title: "Liên hệ hỗ trợ",
   },
   {
-    href: "/account",
+    href: "/user/history",
     title: "Lịch sử giao dịch",
   },
   {
-    href: "/settings",
+    href: "/user/announcements",
     title: "Thông báo",
   },
 ];
