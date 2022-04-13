@@ -20,11 +20,11 @@ import MoreVertIcon from "@mui/IconS-material/MoreVert";
 import NoneSortIcon from "@mui/IconS-material/UnfoldMore";
 import _ from "lodash";
 import React, { useEffect, useMemo, useState } from "react";
-import { AppLoading } from "../AppLoading"; /////////////////////////////////////////////
-import AppMenu from "../AppMenu"; ///////////////////////////////////////////
-import { AppSelect } from "../AppSelect/AppSelect"; ////////////////////
+import { AppLoading } from "../AppLoading"; 
+import AppMenu from "../AppMenu"; 
+import { AppSelect } from "../AppSelect/AppSelect"; 
 import { AppButton } from "../AppButton/AppButton"; /////////////////////
-import { PageSizeItems } from "./AppTable-const"; //////////////////////
+import { PageSizeItems } from "./AppTable-const"; 
 import { useStyles } from "./AppTable.styled";
 
 const CONFIG_DEFAULT = {
