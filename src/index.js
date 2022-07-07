@@ -4,12 +4,41 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
-import { store } from "./redux/store";
+import { store } from "./store";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import {ToastContainer} from 'react-toastify'
+import LocalizationProvider from '@mui/lab/LocalizationProvider'
+import AdapterDateFns from '@mui/lab/AdapterDateFns'
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#234378",
+    },
+    secondary: {
+      main: "#B32034",
+    },
+    table: {
+      head: "#333",
+      row: "rgba(63, 80, 181, 0.1)",
+    },
+  },
+});
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <ThemeProvider theme={theme}>
+        <ToastContainer
+        position='top-right'
+        autoClose={4000}
+        hideProgressBar={true}
+        closeonClick={true}
+        draggable={true}
+        style={{maxWidth:300, left:'unset',right:0}}/>
+  <LocalizationProvider dateAdapter={AdapterDateFns}>
+        <App />
+        </LocalizationProvider>
+      </ThemeProvider>
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")

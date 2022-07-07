@@ -2,7 +2,7 @@ import React from "react";
 import DotLoader from "react-spinners/DotLoader";
 import clockLoader from "react-spinners/ClockLoader";
 import CircleLoader from "react-spinners/CircleLoader";
-import AppLoadingStyled from "./AppLoading-styles";
+import {AppLoadingStyled} from "./AppLoading-styles";
 
 export function AppLoading({
   size = 60,

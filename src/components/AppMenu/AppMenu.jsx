@@ -55,7 +55,7 @@ export default function AppMenu({ anchorEl, setAnchorEl, items = [], onAction = 
                 }
 
                 return (
-                    <MenuItem key={idx} disabled={Boolean(itm?.disabled)} onclick={() => onAction({
+                    <MenuItem key={idx} disabled={Boolean(itm?.disabled)} onClick={() => onAction({
                         action: itm.id,
                         row: _.get(anchorEl, ['data']),
                         rowIndex: _.get(anchorEl, ['rowIndex'])

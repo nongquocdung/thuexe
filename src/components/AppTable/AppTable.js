@@ -12,19 +12,19 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
-import ChevronLeftIcon from "@mui/IconS-material/ChevronLeft";
-import ChevronRightIcon from "@mui/IconS-material/ChevronRight";
-import DescSortIcon from "@mui/IconS-material/KeyboardArrowDown";
-import AscSortIcon from "@mui/IconS-material/KeyboardArrowUp";
-import MoreVertIcon from "@mui/IconS-material/MoreVert";
-import NoneSortIcon from "@mui/IconS-material/UnfoldMore";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import DescSortIcon from "@mui/icons-material/KeyboardArrowDown";
+import AscSortIcon from "@mui/icons-material/KeyboardArrowUp";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
+import NoneSortIcon from "@mui/icons-material/UnfoldMore";
 import _ from "lodash";
 import React, { useEffect, useMemo, useState } from "react";
-import { AppLoading } from "../AppLoading"; 
-import AppMenu from "../AppMenu"; 
-import { AppSelect } from "../AppSelect/AppSelect"; 
-import { AppButton } from "../AppButton/AppButton"; /////////////////////
-import { PageSizeItems } from "./AppTable-const"; 
+import { AppLoading } from "../AppLoading";
+import AppMenu from "../AppMenu";
+import { AppSelect } from "../AppSelect/AppSelect";
+import { AppButton } from "../AppButton";
+import { PageSizeItems } from "./AppTable-const";
 import { useStyles } from "./AppTable.styled";
 
 const CONFIG_DEFAULT = {
@@ -441,7 +441,6 @@ export function AppTable({
                 }}
                 style={{ color: "blue" }}
               >
-                {" "}
                 {str}
               </a>
             );
@@ -468,7 +467,7 @@ export function AppTable({
             style={{ ..._style, ..._stl }}
             key={idx}
           >
-            {render}{" "}
+            {render}
           </TableCell>
         );
 
@@ -513,7 +512,7 @@ export function AppTable({
                 });
               }}
             >
-              <MoreVertIcon />{" "}
+              <MoreVertIcon />
             </IconButton>
           );
         }
@@ -624,7 +623,7 @@ export function AppTable({
     if (config.hasRadio) {
       const noComp = (
         <TableCell width={50} className="h-cell" key={"radio-0"}>
-          <Typography></Typography>{" "}
+          <Typography></Typography>
         </TableCell>
       );
       ret.push(noComp);
@@ -784,17 +783,16 @@ export function AppTable({
           <div className="l-page">
             <Typography> Rows per page: </Typography>
             <AppSelect
-              Items={PageSizeItems}
+              items={PageSizeItems}
               value={pageSize}
               setValue={setPageSize}
               callback={handlePageSize_callback}
             />
-          </div>{" "}
+          </div>
         </Box>
 
         <Box className="f-right">
           <div className="r-page">
-            {" "}
             <Typography>Page</Typography>
             <TextField
               size="small"
@@ -805,7 +803,7 @@ export function AppTable({
               onKeyDown={goToPage}
               onBlur={onBlur}
             />
-            <Typography>of (totalPage)</Typography>
+            <Typography>of {totalPage}</Typography>
           </div>
 
           <div className="r-actions">
@@ -823,7 +821,7 @@ export function AppTable({
               disabled={page > totalPage || loading}
               onClick={() => handleChangePage(1)}
             >
-              <ChevronRightIcon fontsize="large" />{" "}
+              <ChevronRightIcon fontSize="large" />
             </IconButton>
           </div>
         </Box>

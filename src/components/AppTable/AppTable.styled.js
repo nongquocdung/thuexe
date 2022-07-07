@@ -21,10 +21,10 @@ export const useStyles = makeStyles((theme) => ({
     "& .t-footer": {
       width: "100%",
       display: "flex",
-      "&.f-left": {
+      "& .f-left": {
         flex: "1",
         display: "flex",
-        "& .1-page": {
+        "& .l-page": {
           display: "flex",
           marginRight: "20px",
           "& >*": {
@@ -116,9 +116,9 @@ export const useStyles = makeStyles((theme) => ({
             fontFamily: "Open Sans', sans-serif !important",
           },
           "& span.Mui Typography-caption": {
-            fontsize: "0.75rem",
+            fontSize: "0.75rem",
           },
-          fontsize: 14,
+          fontSize: 14,
           fontFamily: "Open Sans', sans-serif !important",
         },
         "& .r-c-act": {

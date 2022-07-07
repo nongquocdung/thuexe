@@ -1,0 +1,16 @@
+export const MANAGER_TYPES = {
+  CAR: "CAR",
+  DRIVER: "DRIVER",
+  HISTORY: "HISTORY",
+  REQUIREMENT: "REQUIREMENT",
+};
+export const MODE_VIEW = {
+  EDIT: "EDIT",
+  NEW: "NEW",
+  DETAIL: "DETAIL",
+};
+
+export const TRANSACTION_TYPES = {
+  UNFINISHED: "UNFINISHED",
+  FINISHED: "FINISHED",
+};

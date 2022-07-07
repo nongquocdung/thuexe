@@ -1,0 +1,5 @@
+export const authType ={
+    LOGIN_SUCCESS:"LOGIN_SUCCESS",
+    LOGOUT:"LOGOUT",
+    UPDATE_ROLE:"UPDATE_ROLE"
+}
