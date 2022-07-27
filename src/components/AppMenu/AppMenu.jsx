@@ -24,28 +24,20 @@ export default function AppMenu({ anchorEl, setAnchorEl, items = [], onAction = 
 
     return (
         <Menu
-
             id="action-menu"
-
             className={classes.rootAppMenu}
             anchorEl={_.get(anchorEl, ['elementRef'])}
-
             keepMounted
-
             transformOrigin={{
                 vertical: 'top',
-
                 horizontal: 'right',
-
             }}
-
             anchorOrigin={{
                 vertical: 'top',
                 horizontal: 'right',
             }}
-
             open={Boolean(_.get(anchorEl, ['open']))}
-            onclose={handleClose}
+            onClose={handleClose}
         >
             {items.filter(itm => !excMenuItems.includes(itm.id)).map((itm, idx) => {
                 const Icon = itm.icon;

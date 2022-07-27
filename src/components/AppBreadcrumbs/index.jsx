@@ -127,7 +127,8 @@ export function AppBreadcrumbs() {
                 {renderLinks()}
             </Breadcrumbs >
             <Typography variant="h5" style={{ fontWeight: 700, whitespace: "nowrap", textOverflow: "ellipsis", overflow: "hidden" }}>
-                {_.isEmpty(title) ? lastUrl : title}
+                {/* {_.isEmpty(title) ? lastUrl : title} */}
+                {title}
             </Typography>
         </div>
     );

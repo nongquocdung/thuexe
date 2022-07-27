@@ -293,7 +293,7 @@ export const useStyles = makeStyles((theme) => ({
   contentFull: {
     padding: theme.spacing(1),
     "& .main-box": {
-      height: "calc(100vhs- 40px - 16px)",
+      height: "calc(100vh - 115px)",
     },
   },
   rootProfileMenu: {

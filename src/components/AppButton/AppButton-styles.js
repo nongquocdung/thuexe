@@ -36,8 +36,8 @@ export const useStyles = makeStyles((theme) => ({
   },
   rootAppBackBtn: {
     position: "absolute",
-    top: -50,
-    right: -8,
+    top: -58,
+    right: 0,
     zIndex: 2,
   },
 }));

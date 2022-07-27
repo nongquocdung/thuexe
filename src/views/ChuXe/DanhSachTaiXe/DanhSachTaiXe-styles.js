@@ -7,4 +7,9 @@ export const DanhSachTaiXeStyled = styled("div")(({ theme }) => ({
   "& .app-list": {
     width: "100%",
   },
+  "& .top-right-act": {
+    position: "absolute",
+    top: -50,
+    right: 0,
+  },
 }));

@@ -8,7 +8,7 @@ import { AppButton, AppForm } from '../../../components'
 import AppList from '../../../components/AppList'
 import { RoutePaths } from '../../../routes/protected-routes'
 import { layoutActions } from '../../../store/actions'
-import { GhiChu_Form, mockData_DanhSachTaiXe, mockData_DanhSachXe } from './ChiTietYeuCau-const'
+import { GhiChu_Form, mockData_DanhSachTaiXe, mockData_DanhSachXe, ThemTaiXe_Form } from './ChiTietYeuCau-const'
 import { ChiTietYeuCauStyled } from './ChiTietYeuCau-styles'
 
 const ChiTietYeuCau = () => {
@@ -79,7 +79,25 @@ const ChiTietYeuCau = () => {
           </div>
         </div>
         <div className="segment">
-          <Typography className='segment-title'>Danh sách tài xế</Typography>
+          <div style={{ display: 'flex' }}>
+            <Typography style={{ margin: 'auto 0px' }} className='segment-title'>Danh sách tài xế</Typography>
+            <div style={{ minWidth: 150, margin: '0px 10px' }}>
+              <AppForm
+                fields={ThemTaiXe_Form}
+                size="small"
+                control={control}
+                errors={errors}
+                getValues={getValues}
+                setValue={setValue}
+              />
+            </div>
+            <AppButton
+              style={{ minHeight: 40 }}
+              color='primary'
+              label='Thêm tài xế'
+              variant="outlined"
+              onClick={() => { }} />
+          </div>
           <div className='list'>
             <AppList data={listDriver} type={MANAGER_TYPES.DRIVER} hasBtn={true} />
           </div>

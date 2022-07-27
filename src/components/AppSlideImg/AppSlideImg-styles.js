@@ -8,4 +8,7 @@ export const AppSlideImgStyled = styled("div")(({ theme }) => ({
     height: "auto",
     overflow: "hidden",
   },
+  "& .swiper-pagination": {
+    bottom: "0px !important",
+  },
 }));

@@ -22,12 +22,11 @@ export function AppSelect({ label = '', value, setValue = () => { }, items = [],
         setValue(e.target.value)
         callback(e.target.value)
     }
-
     return (
 
         <Box className={classes.rootAppSelect}>
 
-            <FormControl variant="outlined" size="small" FullWidth>
+            <FormControl variant="outlined" size="small" fullWidth>
                 {label !== '' && !hasError && (
                     <InputLabel id="app-select-label">{label}</InputLabel>
                 )}

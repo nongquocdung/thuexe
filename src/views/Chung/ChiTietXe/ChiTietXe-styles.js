@@ -27,6 +27,14 @@ export const ChiTietXeStyled = styled("div")(({ theme }) => ({
       display: "inline",
     },
   },
+  "& .act": {
+    display: "flex",
+    flexDirection: "column",
+    "& .btn": {
+      minWidth: "235px",
+      marginTop:10
+    },
+  },
   "& .date": {
     width: "50%",
     marginTop: 50,

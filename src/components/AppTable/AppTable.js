@@ -155,6 +155,7 @@ export function AppTable({
     }
   }
   const onChangePage = (e) => {
+    console.log(e.target);
     const { value } = e.target;
     setPage(value);
   };
@@ -495,7 +496,6 @@ export function AppTable({
         ret.push(Comp);
       } else if (h.category === "MENU") {
         let Comp;
-
         if (!config.hasFunc || row.disAction) {
           Comp = null;
         } else {
@@ -519,7 +519,7 @@ export function AppTable({
         Comp = (
           <TableCell
             key={idx}
-            classhiame={`r-cell r-c-act ${clazzName}`}
+            className={`r-cell r-c-act ${clazzName}`}
             align={align(h)}
             style={_style}
           >

@@ -30,4 +30,8 @@ export const ChiTietYeuCauStyled = styled("div")(({ theme }) => ({
       },
     },
   },
+  "& .access": {
+    display: "flex",
+    flexDirection: "row-reverse",
+  },
 }));

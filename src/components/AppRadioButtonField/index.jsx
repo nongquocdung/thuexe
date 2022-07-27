@@ -1,4 +1,4 @@
-import { FormControl, FormControlLabel, Radio, RadioGroup } from '@mui/material';
+import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from '@mui/material';
 import React from 'react'
 import { Controller } from 'react-hook-form';
 
@@ -26,7 +26,9 @@ const AppRadioButtonField = ({
                 let _readOnly = field?.readOnly || Boolean(readOnly)
                 return (
                     <FormControl>
+                        <FormLabel >{field.label}</FormLabel>
                         <RadioGroup
+                            row={field.row || false}
                             aria-labelledby="demo-radio-buttons-group-label"
                             defaultValue={value}
                             value={value}

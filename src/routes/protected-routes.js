@@ -15,10 +15,17 @@ import ChiTietTaiXe from "../views/Chung/ChiTietTaiXe";
 import ThanhToan from "../views/KhachHang/ThanhToan";
 import DanhSachYeuCau from "../views/ChuXe/DanhSachYeuCau";
 import DanhSachXe from "../views/ChuXe/DanhSachXe";
+import DanhSachXe_TrangChu from "../views/Chung/DanhSachXe";
 import DanhSachTaiXe from "../views/ChuXe/DanhSachTaiXe";
 import ViewListIcon from "@mui/icons-material/ViewList";
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import ExploreIcon from "@mui/icons-material/Explore";
 import ChiTietYeuCau from "../views/ChuXe/ChiTietYeuCau";
+import HomeIcon from "@mui/icons-material/Home";
+import TrangChu from "../views/Chung/TrangChu";
+// import CarRentalIcon from "@mui/icons-material/CarRental";
+import TaoDonXe from "../views/Chung/TaoDonXe";
+import HoTro from "../views/Chung/HoTro";
 
 export const MapPathRoute2Name = {
   demo: "demo",
@@ -38,6 +45,11 @@ export const RouteIds = {
   ChiTietYeuCau: "danh-sach-yeu-cau",
   DanhSachXe: "danh-sach-xe",
   DanhSachTaiXe: "danh-sach-tai-xe",
+
+  TrangChu: "trang-chu",
+  TaoDonXe: "tao-don-xe",
+  DanhSachXeTrangChu: "danh-sach-xe",
+  HoTro: "ho-tro",
 };
 export const DCERouteIds = {
   Detail: ":id",
@@ -59,6 +71,11 @@ export const RoutePaths = {
   DanhSachXe: ["", RouteIds.DanhSachXe].join("/"),
   DanhSachTaiXe: ["", RouteIds.DanhSachTaiXe].join("/"),
   ChiTietYeuCau: ["", RouteIds.ChiTietYeuCau, DCERouteIds.Detail].join("/"),
+
+  TrangChu: ["", RouteIds.TrangChu].join("/"),
+  TaoDonXe: ["", RouteIds.TaoDonXe].join("/"),
+  DanhSachXeTrangChu: ["", RouteIds.DanhSachXeTrangChu].join("/"),
+  HoTro: ["", RouteIds.HoTro].join("/"),
 };
 
 export const ProtectedRoutes_KhachHang = {
@@ -208,5 +225,40 @@ export const ProtectedRoutes_ChuXe = {
     id: RouteIds.ChiTietYeuCau,
     path: RoutePaths.ChiTietYeuCau,
     component: ChiTietYeuCau,
+  },
+};
+
+export const ProtectedRoutes_TrangChu = {
+  TrangChu: {
+    exact: true,
+    id: RouteIds.TrangChu,
+    label: "Trang chủ",
+    path: RoutePaths.TrangChu,
+    component: TrangChu,
+    icon: HomeIcon,
+  },
+  TaoDonXe: {
+    exact: true,
+    id: RouteIds.TaoDonXe,
+    label: "Tạo đơn xe",
+    path: RoutePaths.TaoDonXe,
+    component: TaoDonXe,
+    icon: ShoppingCartIcon,
+  },
+  TaoDonDanhSachXeTrangChuXe: {
+    exact: true,
+    id: RouteIds.DanhSachXeTrangChu,
+    label: "Danh sach xe",
+    path: RoutePaths.DanhSachXeTrangChu,
+    component: DanhSachXe_TrangChu,
+    icon: ViewListIcon,
+  },
+  HoTro: {
+    exact: true,
+    id: RouteIds.HoTro,
+    label: "Hỗ trợ",
+    path: RoutePaths.HoTro,
+    component: HoTro,
+    icon: HelpIcon,
   },
 };

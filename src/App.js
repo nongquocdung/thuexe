@@ -18,13 +18,18 @@ import { UserSupportPage } from "./pages/UserSupport";
 import { UserHistoryPage } from "./pages/UserHistory";
 import { UserAnnouncementsPage } from "./pages/UserAnnouncements";
 import { useSelector } from "react-redux";
-import { ProtectedRoutes_ChuXe, ProtectedRoutes_KhachHang } from "./routes/protected-routes";
+import {
+  ProtectedRoutes_ChuXe,
+  ProtectedRoutes_KhachHang,
+  ProtectedRoutes_TrangChu,
+} from "./routes/protected-routes";
 import DefaultLayout from "./layouts/Default";
-function App(props){
+function App(props) {
   const { loggedIn, user } = useSelector((state) => state.auth);
   const { refreshMenu } = useSelector((state) => state.layout);
   // const [routes, setRoutes] = useState(Object.values(ProtectedRoutes_KhachHang));
   const [routes, setRoutes] = useState(Object.values(ProtectedRoutes_ChuXe));
+  // const [routes, setRoutes] = useState(Object.values(ProtectedRoutes_TrangChu));
   const [script, setScript] = useState("");
   // React.useEffect(() => {
   //   //chia luồng cho úng dụng routes. .....
@@ -63,6 +68,7 @@ function App(props){
             );
           })}
           <Route path="*" element={<Navigate to="/danh-sach-yeu-cau" />} />
+          {/* <Route path="*" element={<Navigate to="/trang-chu" />} /> */}
         </Routes>
       </DefaultLayout>
     );
@@ -104,6 +110,6 @@ function App(props){
       {renderProtectedRoutes()}
     </BrowserRouter>
   );
-};
+}
 
 export default App;

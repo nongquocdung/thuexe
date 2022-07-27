@@ -12,7 +12,7 @@ export function AppButton({ label = '...', icon: Icon, type = "", loading = fals
         if (type === "back") {
             ret = <KeyboardBackspaceIcon />
         } else if (Icon) {
-            ret = <Icon />
+            ret = <Icon {...rest?.style_icon} />
         }
         return ret;
     }
